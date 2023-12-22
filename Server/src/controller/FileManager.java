@@ -22,19 +22,4 @@ public class FileManager {
         xmlParser.marshalize(file, students);
     }
 
-    public static void main(String[] args) {
-        Student s = new Student();
-        Student s1 = new Student("Kirill", "01.01.2001", 6363);
-        Student s2 = new Student();
-        Students students = new Students();
-        students.addStudent(s);
-        students.addStudent(s1);
-        students.addStudent(s2);
-
-        FileManager fileManager = new FileManager();
-        fileManager.writeXML(students);
-
-        Students students1 = fileManager.readXML();
-        students1.printStudents();
-    }
 }
