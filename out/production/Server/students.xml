@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<students>
+    <student>
+        <name>unknown</name>
+        <birthDate>unknown</birthDate>
+        <groupNumber>0</groupNumber>
+    </student>
+    <student>
+        <name>Kirill</name>
+        <birthDate>01.01.2001</birthDate>
+        <groupNumber>6363</groupNumber>
+    </student>
+    <student>
+        <name>unknown</name>
+        <birthDate>unknown</birthDate>
+        <groupNumber>0</groupNumber>
+    </student>
+</students>
