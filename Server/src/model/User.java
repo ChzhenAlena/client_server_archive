@@ -8,27 +8,29 @@ public class User {
     public String login;
     @XmlElement(name = "password")
     public String password;
-   // @XmlElement(name = "accessType", required = true)
-    //public AccessType accessType;
+    @XmlElement(name = "accessType")
+    public AccessType accessType;
     public User(){}
-   /* public User(String login, String password, AccessType accessType){
+    public User(String login, String password, AccessType accessType){
         this.login = login;
         this.password = password;
         this.accessType = accessType;
 
-    }*/
+    }
     public User(String login, String password){
         this.login = login;
         this.password = password;
-        //this.accessType = AccessType.READ;
+        this.accessType = AccessType.READ;
 
     }
+
 
     @Override
     public String toString() {
         return "User{" +
                 "login='" + login + '\'' +
                 ", password='" + password + '\'' +
+                ", accessType=" + accessType +
                 '}';
     }
 

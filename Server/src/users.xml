@@ -3,10 +3,11 @@
     <user>
         <login>sdf</login>
         <password>wef</password>
+        <accessType>READ</accessType>
     </user>
     <user>
-        <login>sdf</login>
-        <password>wef</password>
+        <login>SDFASFSA</login>
+        <password>ASDFASF</password>
+        <accessType>READ</accessType>
     </user>
-    <accessType>EDIT</accessType>
 </users>

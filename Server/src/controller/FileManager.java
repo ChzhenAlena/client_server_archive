@@ -34,7 +34,7 @@ public class FileManager {
         //User user1 = new User("sdf", "wef", AccessType.EDIT);
         //User user2 = new User("sdf", "wef", AccessType.EDIT);
         User user1 = new User("sdf", "wef");
-        User user2 = new User("sdf", "wef");
+        User user2 = new User("SDFASFSA", "ASDFASF");
         users.addUser(user1);
         users.addUser(user2);
 

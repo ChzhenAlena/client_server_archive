@@ -10,8 +10,7 @@ import java.util.List;
 public class Users {
     @XmlElement(name = "user")
     public List<User> users = new ArrayList<>();
-    @XmlElement(name = "accessType")
-    public AccessType accessType = AccessType.EDIT;
+
 
     public void addUser(User user){
         users.add(user);
@@ -19,6 +18,5 @@ public class Users {
     public void printUsers(){
         for(User user : users)
             System.out.println(user.toString());
-        System.out.println(accessType);
     }
 }
