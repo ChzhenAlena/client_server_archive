@@ -5,35 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c1fc74d-4310-491d-b952-6db59b52fac3" name="Changes" comment="Client-server is created">
-      <change afterPath="$PROJECT_DIR$/Server/src/model/AccessType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/model/Users.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/controller/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/controller/ClientManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/controller/ClientManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/controller/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/controller/ConnectionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/controller/ConsoleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/controller/ConsoleManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/model/AccessType.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/model/AccessType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/controller/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/controller/ConnectionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/controller/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/controller/FileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/controller/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/controller/ServerManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/controller/xmlParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/controller/XmlParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/model/AccessType.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/model/AccessType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/model/Students.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/model/Students.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/model/Users.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/students.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/students.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Client/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Client/controller/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Client/controller/ClientManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/controller/ClientManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Client/controller/ConnectionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/controller/ConnectionManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Client/controller/ConsoleManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/controller/ConsoleManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Client/model/AccessType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/model/AccessType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Client/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/controller/ConnectionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/controller/ConnectionManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Server/controller/FileManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/controller/FileManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/controller/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/controller/xmlParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/controller/xmlParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/model/AccessType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/model/AccessType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/model/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/model/Users.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Server/students.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/students.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<users>
+    <user>
+        <login>sdf</login>
+        <password>wef</password>
+    </user>
+    <user>
+        <login>sdf</login>
+        <password>wef</password>
+    </user>
+    <accessType>EDIT</accessType>
+</users>

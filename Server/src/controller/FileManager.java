@@ -31,25 +31,29 @@ public class FileManager {
     }
     public static void main(String[] args) {
         Users users = new Users();
-        User user1 = new User("sdf", "wef", AccessType.EDIT);
-        User user2 = new User("sdf", "wef", AccessType.EDIT);
+        //User user1 = new User("sdf", "wef", AccessType.EDIT);
+        //User user2 = new User("sdf", "wef", AccessType.EDIT);
+        User user1 = new User("sdf", "wef");
+        User user2 = new User("sdf", "wef");
         users.addUser(user1);
         users.addUser(user2);
 
         Students students = new Students();
-        Student student1 = new Student("sadfsdf", "23423423", 3434);
+        Student student1 = new Student("SD", "23423423", 3434);
         Student student2 = new Student("SDGSDFGSDF", "111", 00000);
         students.addStudent(student1);
         students.addStudent(student2);
 
         FileManager fileManager = new FileManager();
+        System.out.println("students");
         fileManager.writeArchiveXML(students);
         Students students1 = fileManager.readArchiveXML();
         students1.printStudents();
 
         System.out.println("--------------------------");
+        users.printUsers();
         fileManager.writeUsersXML(users);
-        //Users users1 = fileManager.readUsersXML();
-        //users1.printStudents();
+        Users users1 = fileManager.readUsersXML();
+        users1.printUsers();
     }
 }

@@ -2,6 +2,8 @@ package model;
 
 import jakarta.xml.bind.annotation.*;
 
+@XmlAccessorType(XmlAccessType.FIELD)
+//@XmlType(name = "student")
 public class Student {
     @XmlElement(name = "name")
     public String name = "unknown";

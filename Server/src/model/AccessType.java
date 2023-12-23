@@ -5,11 +5,11 @@ import jakarta.xml.bind.annotation.XmlEnum;
 import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
 
-@XmlType(name = "enum")
+@XmlType(name = "AccessType")
 @XmlEnum
 public enum AccessType {
-    @XmlEnumValue(value = "read")
+    @XmlEnumValue(value = "READ")
     READ,
-    @XmlEnumValue(value = "edit")
+    @XmlEnumValue(value = "EDIT")
     EDIT;
 }

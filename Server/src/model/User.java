@@ -1,28 +1,35 @@
 package model;
 
-import jakarta.xml.bind.annotation.XmlAttribute;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.*;
 
+@XmlAccessorType(XmlAccessType.FIELD)
 public class User {
     @XmlElement(name = "login")
     public String login;
     @XmlElement(name = "password")
     public String password;
-    @XmlElement(name = "Enum")
-    public AccessType accessType;
+   // @XmlElement(name = "accessType", required = true)
+    //public AccessType accessType;
     public User(){}
-    public User(String login, String password, AccessType accessType){
+   /* public User(String login, String password, AccessType accessType){
         this.login = login;
         this.password = password;
         this.accessType = accessType;
 
-    }
+    }*/
     public User(String login, String password){
         this.login = login;
         this.password = password;
-        this.accessType = AccessType.READ;
+        //this.accessType = AccessType.READ;
 
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 
     public String getLogin() {
@@ -41,11 +48,11 @@ public class User {
         this.password = password;
     }
 
-    public AccessType getAccessType() {
+    /*public AccessType getAccessType() {
         return accessType;
     }
 
     public void setAccessType(AccessType accessType) {
         this.accessType = accessType;
-    }
+    }*/
 }
