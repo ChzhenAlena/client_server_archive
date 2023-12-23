@@ -15,8 +15,9 @@ public class ConnectionManager {
             socket = new Socket(host, port);
             reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-            System.out.println("Connected to server");
+            System.out.println("Вы подключились к серверу");
         } catch (IOException e) {
+            System.out.println("Не удалось подключиться к серверу. Возможно, он не запущен.");
             throw new RuntimeException(e);
         }
     }
@@ -35,7 +36,7 @@ public class ConnectionManager {
             writer.close();
             reader.close();
             socket.close();
-            System.out.println("Connection closed");
+            System.out.println("Соединение закрыто");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -43,7 +44,7 @@ public class ConnectionManager {
     public void waitForMessage(){
         try {
             while (socket.getInputStream().available() == 0)
-                Thread.sleep(2000);
+                Thread.sleep(1000);
         } catch (InterruptedException | IOException e){
             throw new RuntimeException();
         }

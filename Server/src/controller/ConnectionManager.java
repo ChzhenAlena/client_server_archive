@@ -12,21 +12,21 @@ public class ConnectionManager {
     BufferedReader reader;
     BufferedWriter writer;
 
-    public void connect(Socket socket){
+    public void connect(ServerSocket serverSocket){
         try {
-            this.socket = socket;
+            this.socket = serverSocket.accept();
             reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        System.out.println("Client connected");
+        System.out.println("Клиент подключился");
     }
     public void waitForMessage(){
-        System.out.println("Waiting for a message");
+        System.out.println("В ожидании сообщения");
         try {
             while (socket.getInputStream().available() == 0) {
-                Thread.sleep(2000);
+                Thread.sleep(1000);
             }
         } catch (IOException | InterruptedException e){
             throw new RuntimeException(e);
@@ -58,7 +58,7 @@ public class ConnectionManager {
             writer.close();
             reader.close();
             socket.close();
-            System.out.println("Connection closed");
+            System.out.println("Соединение закрыто");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

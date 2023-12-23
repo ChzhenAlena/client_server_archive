@@ -10,4 +10,9 @@
         <password>wef</password>
         <accessType>EDIT</accessType>
     </user>
+    <user>
+        <login>12</login>
+        <password>12</password>
+        <accessType>READ</accessType>
+    </user>
 </users>

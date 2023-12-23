@@ -3,8 +3,8 @@ import controller.ServerManager;
 public class Server {
     public static void main(String[] args) {
         ServerManager serverManager = new ServerManager();
-        serverManager.start();
-
+        serverManager.startServer();
+        serverManager.connect();
         String[] command;
         while (true){
             command = serverManager.receiveMessage();
@@ -17,7 +17,9 @@ public class Server {
                     break;
 
                 case "EXIT":
-                    serverManager.close();
+                    serverManager.disconnect();
+                    System.out.println("В ожидании клиента");
+                    serverManager.connect();
                     break;
             }
         }

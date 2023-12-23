@@ -10,18 +10,22 @@ public class ClientManager {
         connectionManager.connect();
     }
     public AccessType logIn(String mode){
-        System.out.println("Enter your login: ");
+        System.out.println("Введите логин: ");
         String login = console.getString();
-        System.out.println("Enter your password: ");
+        System.out.println("Введите пароль: ");
         String password = console.getString();
         connectionManager.sendMessage(mode + " " + login + " " + password);
         String serverAnswer = receiveMessage();
-        if(serverAnswer.equals("Failure")){
-            System.out.println("Failed to sign in. Check your login and password");
+        if(serverAnswer.equals("Failure") && mode.equals("SIGNIN")){
+            System.out.println("Не получилось войти. Проверьте свой логин и пароль");
+            return null;
+        }
+        if(serverAnswer.equals("Failure") && mode.equals("REGISTER")){
+            System.out.println("Пользователь с таким логином уже зарегестрирован. Выберите другой логин?");
             return null;
         }
         else{
-            System.out.println("You are signed in");
+            System.out.println("Вы вошли");
             return AccessType.valueOf(serverAnswer);
         }
     }

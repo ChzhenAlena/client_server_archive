@@ -26,7 +26,7 @@ public class Client {
                         clientManager.exit();
                         System.exit(0);
                     default:
-                        System.out.println("Такого варианта нет, введите заново\n");
+                        System.out.println("Такого варианта нет, введите число от 1 до 3\n");
                 }
             }
 
@@ -50,7 +50,7 @@ public class Client {
                         access = null;
                         break;
                     default:
-                        System.out.println("Такого варианта нет, введите заново\n");
+                        System.out.println("Такого варианта нет, введите число от 1 до 5\n");
                 }
 
             }
@@ -65,7 +65,7 @@ public class Client {
                         access = null;
                         break;
                     default:
-                        System.out.println("Такого варианта нет, введите заново\n");
+                        System.out.println("Такого варианта нет, введите 1 или 2\n");
                 }
             }
         }

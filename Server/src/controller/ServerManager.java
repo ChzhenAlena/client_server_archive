@@ -10,17 +10,24 @@ public class ServerManager {
     private static final int port = 8000;
     ConnectionManager connectionManager = new ConnectionManager();
     FileManager fileManager = new FileManager();
+    ServerSocket serverSocket;
     model.Users users;
-    public void start() {
-        try(ServerSocket serverSocket = new ServerSocket(port)) {
-            System.out.println("Server started");
-            connectionManager.connect(serverSocket.accept());
+    public void startServer() {
+        try {
+            serverSocket = new ServerSocket(port);
+            System.out.println("Сервер запущен");
+            //connectionManager.connect(serverSocket.accept());
+
         }
         catch (IOException e) {
             throw new RuntimeException(e);
         }
-        users = fileManager.readUsersXML();
 
+
+    }
+    public void connect(){
+        connectionManager.connect(serverSocket);
+        users = fileManager.readUsersXML();
     }
     public void signIn(String login, String password){
         model.User user = users.findUser(login, password);
@@ -41,7 +48,8 @@ public class ServerManager {
         connectionManager.waitForMessage();
         return connectionManager.receiveMessage().split(" ");
     }
-    public void close(){
+    public void disconnect(){
         connectionManager.close();
+        fileManager.writeUsersXML(users);
     }
 }
