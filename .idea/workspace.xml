@@ -11,21 +11,12 @@
       <change beforePath="$PROJECT_DIR$/Client/src/controller/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/controller/ConnectionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/controller/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/controller/ConnectionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/controller/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/controller/FileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/controller/ServerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/controller/ServerManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/model/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/users.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Client/controller/ClientManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/controller/ClientManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Client/controller/ConnectionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/controller/ConnectionManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/controller/ConsoleManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/controller/ConsoleManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/controller/ConnectionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/controller/ConnectionManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/controller/FileManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/controller/FileManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Server/controller/ServerManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/controller/ServerManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/model/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/model/Users.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/users.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

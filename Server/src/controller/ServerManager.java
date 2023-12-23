@@ -1,5 +1,8 @@
 package controller;
 
+import model.AccessType;
+import model.User;
+
 import java.io.*;
 import java.net.ServerSocket;
 
@@ -19,7 +22,7 @@ public class ServerManager {
         users = fileManager.readUsersXML();
 
     }
-    public void SignIn(String login, String password){
+    public void signIn(String login, String password){
         model.User user = users.findUser(login, password);
         String message;
         if(user == null)
@@ -28,8 +31,17 @@ public class ServerManager {
             message = String.valueOf(user.getAccessType());
         connectionManager.sendMessage(message);
     }
+    public void register(String login, String password){
+        model.User user = new User(login, password, AccessType.READ);
+        users.addUser(user);
+        connectionManager.sendMessage("READ");
+    }
+
     public String[] receiveMessage(){
         connectionManager.waitForMessage();
         return connectionManager.receiveMessage().split(" ");
+    }
+    public void close(){
+        connectionManager.close();
     }
 }

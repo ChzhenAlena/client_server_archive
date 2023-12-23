@@ -10,7 +10,14 @@ public class Server {
             command = serverManager.receiveMessage();
             switch (command[0]){
                 case "SIGNIN":
-                    serverManager.SignIn(command[1], command[2]);
+                    serverManager.signIn(command[1], command[2]);
+                    break;
+                case "REGISTER":
+                    serverManager.register(command[1], command[2]);
+                    break;
+
+                case "EXIT":
+                    serverManager.close();
                     break;
             }
         }

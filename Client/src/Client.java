@@ -16,12 +16,14 @@ public class Client {
                 answer = console.getNumber();
                 switch (answer) {
                     case 1:
-                        access = clientManager.signIn();
+                        access = clientManager.logIn("SIGNIN");
                         break;
                     case 2:
-                        //clientManager.register();
+                        clientManager.logIn("REGISTER");
+                        access = AccessType.READ;
                         break;
                     case 3:
+                        clientManager.exit();
                         System.exit(0);
                     default:
                         System.out.println("Такого варианта нет, введите заново\n");
@@ -45,7 +47,7 @@ public class Client {
                         //clientManager.delete();
                         break;
                     case 5:
-                        //user = clientManager.logOut();
+                        access = null;
                         break;
                     default:
                         System.out.println("Такого варианта нет, введите заново\n");
@@ -60,7 +62,7 @@ public class Client {
                         //clientManager.show();
                         break;
                     case 2:
-                        //user = clientManager.logOut();
+                        access = null;
                         break;
                     default:
                         System.out.println("Такого варианта нет, введите заново\n");

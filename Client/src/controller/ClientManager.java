@@ -9,12 +9,12 @@ public class ClientManager {
     public void start() {
         connectionManager.connect();
     }
-    public AccessType signIn(){
+    public AccessType logIn(String mode){
         System.out.println("Enter your login: ");
         String login = console.getString();
         System.out.println("Enter your password: ");
         String password = console.getString();
-        connectionManager.sendMessage("SIGNIN " + login + " " + password);
+        connectionManager.sendMessage(mode + " " + login + " " + password);
         String serverAnswer = receiveMessage();
         if(serverAnswer.equals("Failure")){
             System.out.println("Failed to sign in. Check your login and password");
@@ -24,8 +24,12 @@ public class ClientManager {
             System.out.println("You are signed in");
             return AccessType.valueOf(serverAnswer);
         }
-
     }
+    public void exit(){
+        connectionManager.sendMessage("EXIT");
+        connectionManager.close();
+    }
+
     public String receiveMessage(){
         connectionManager.waitForMessage();
         return connectionManager.receiveMessage();

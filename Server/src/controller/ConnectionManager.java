@@ -53,4 +53,15 @@ public class ConnectionManager {
         }
 
     }
+    public void close(){
+        try {
+            writer.close();
+            reader.close();
+            socket.close();
+            System.out.println("Connection closed");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
 }
