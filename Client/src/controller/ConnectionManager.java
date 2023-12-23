@@ -2,6 +2,7 @@ package controller;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.TreeMap;
 
 public class ConnectionManager {
     String host = "127.0.0.1";
@@ -28,5 +29,20 @@ public class ConnectionManager {
             throw new RuntimeException(e);
         }
 
+    }
+    public void waitForMessage(){
+        try {
+            while (socket.getInputStream().available() == 0)
+                Thread.sleep(2000);
+        } catch (InterruptedException | IOException e){
+            throw new RuntimeException();
+        }
+    }
+    public String receiveMessage(){
+        try {
+            return reader.readLine();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

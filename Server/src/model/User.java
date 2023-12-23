@@ -50,11 +50,11 @@ public class User {
         this.password = password;
     }
 
-    /*public AccessType getAccessType() {
+    public AccessType getAccessType() {
         return accessType;
     }
 
     public void setAccessType(AccessType accessType) {
         this.accessType = accessType;
-    }*/
+    }
 }

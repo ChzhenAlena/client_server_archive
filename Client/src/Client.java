@@ -8,15 +8,15 @@ public class Client {
         ClientManager clientManager = new ClientManager();
         ConsoleManager console = new ConsoleManager();
         clientManager.start();
-        model.User user = null;
+        AccessType access = null;
         int answer;
         while(true){
-            if (user == null) {
+            if (access == null) {
                 console.printStartMenu();
                 answer = console.getNumber();
                 switch (answer) {
                     case 1:
-                        clientManager.logIn(user);
+                        access = clientManager.signIn();
                         break;
                     case 2:
                         //clientManager.register();
@@ -28,7 +28,7 @@ public class Client {
                 }
             }
 
-            while ((user != null) && (user.getAccessType() == AccessType.EDIT)) {
+            while (access == AccessType.EDIT) {
                 console.printAdminMenu();
                 answer = console.getNumber();
                 switch (answer) {
@@ -52,7 +52,7 @@ public class Client {
                 }
 
             }
-            while ((user != null) && (user.getAccessType() == AccessType.READ)) {
+            while (access == AccessType.READ) {
                 console.printUserMenu();
                 answer = console.getNumber();
                 switch (answer) {

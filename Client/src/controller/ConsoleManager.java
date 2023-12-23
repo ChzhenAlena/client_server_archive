@@ -18,15 +18,15 @@ public class ConsoleManager {
         System.out.println(menu);
     }
     public void printAdminMenu(){
-        String menu = "1. Просмотреть архив\n"+
-                "2. Изменить запись\n" +
-                "3. Создать запись\n" +
-                "4. Удалить запись\n" +
+        String menu = "1. Просмотреть дело\n"+
+                "2. Изменить дело\n" +
+                "3. Создать дело\n" +
+                "4. Удалить дело\n" +
                 "5. Выйти из системы";
         System.out.println(menu);
     }
     public void printUserMenu(){
-        String menu = "1. Просмотреть архив\n"+
+        String menu = "1. Просмотреть дело\n"+
                 "2. Выйти из системы";
         System.out.println(menu);
     }

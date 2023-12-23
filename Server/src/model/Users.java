@@ -19,4 +19,11 @@ public class Users {
         for(User user : users)
             System.out.println(user.toString());
     }
+    public User findUser(String login, String password){
+        for(User user : users){
+            if(login.equals(user.getLogin()) && password.equals(user.getPassword()))
+                return user;
+        }
+        return null;
+    }
 }

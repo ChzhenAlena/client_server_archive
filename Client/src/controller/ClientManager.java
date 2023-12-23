@@ -9,14 +9,26 @@ public class ClientManager {
     public void start() {
         connectionManager.connect();
     }
-    public void logIn(model.User user){
-        user = new User();
+    public AccessType signIn(){
         System.out.println("Enter your login: ");
-        user.setLogin(console.getString());
+        String login = console.getString();
         System.out.println("Enter your password: ");
-        user.setPassword(console.getString());
-        user.setAccessType(AccessType.READ);
-        connectionManager.sendMessage("LOGIN " + user.getLogin() + " " + user.getPassword());
+        String password = console.getString();
+        connectionManager.sendMessage("SIGNIN " + login + " " + password);
+        String serverAnswer = receiveMessage();
+        if(serverAnswer.equals("Failure")){
+            System.out.println("Failed to sign in. Check your login and password");
+            return null;
+        }
+        else{
+            System.out.println("You are signed in");
+            return AccessType.valueOf(serverAnswer);
+        }
+
+    }
+    public String receiveMessage(){
+        connectionManager.waitForMessage();
+        return connectionManager.receiveMessage();
     }
 
 }

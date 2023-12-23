@@ -43,4 +43,14 @@ public class ConnectionManager {
         }
         return message.toString();
     }
+    public void sendMessage(String message){
+        try {
+            writer.write(message);
+            writer.newLine();
+            writer.flush();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
 }

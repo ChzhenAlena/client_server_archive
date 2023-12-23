@@ -17,7 +17,7 @@ public class FileManager {
         this("Server\\src\\");
     }
     public void readInfo(){
-        
+
     }
     public Students readArchiveXML(){
         return XmlParser.demarshalize(archiveFile, Students.class);
