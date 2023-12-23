@@ -1,7 +1,6 @@
 import controller.ClientManager;
 import controller.ConsoleManager;
 import model.AccessType;
-import model.User;
 
 public class Client {
     public static void main(String[] args) {

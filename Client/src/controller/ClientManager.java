@@ -1,7 +1,6 @@
 package controller;
 
 import model.AccessType;
-import model.User;
 
 public class ClientManager {
     ConnectionManager connectionManager = new ConnectionManager();

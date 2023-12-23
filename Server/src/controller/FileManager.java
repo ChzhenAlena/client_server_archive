@@ -10,13 +10,14 @@ public class FileManager {
     private File usersFile;
     FileManager(String directory){
         this.directory = new File(directory);
-        archiveFile = new File(directory + "students.xml");
-        usersFile = new File(directory + "users.xml");
+        archiveFile = new File(directory + "files\\students.xml");
+        usersFile = new File(directory + "files\\users.xml");
     }
     FileManager(){
         this("Server\\src\\");
     }
-    public void readInfo(){
+
+    public void findStudentFile(int id){
 
     }
     public Students readArchiveXML(){
@@ -32,7 +33,7 @@ public class FileManager {
     public void writeUsersXML(Users users){
         XmlParser.marshalize(usersFile, users, Users.class);
     }
-    /*public static void main(String[] args) {
+    public static void main(String[] args) {
         Users users = new Users();
         User user1 = new User("sdf", "wef", AccessType.EDIT);
         User user2 = new User("sdf", "wef", AccessType.EDIT);
@@ -55,5 +56,5 @@ public class FileManager {
         fileManager.writeUsersXML(users);
         Users users1 = fileManager.readUsersXML();
         users1.printUsers();
-    }*/
+    }
 }

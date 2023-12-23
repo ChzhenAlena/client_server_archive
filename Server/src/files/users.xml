@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <users>
     <user>
-        <login>asd</login>
-        <password>a</password>
+        <login>sdf</login>
+        <password>wef</password>
         <accessType>EDIT</accessType>
     </user>
     <user>
         <login>sdf</login>
         <password>wef</password>
         <accessType>EDIT</accessType>
-    </user>
-    <user>
-        <login>12</login>
-        <password>12</password>
-        <accessType>READ</accessType>
     </user>
 </users>
