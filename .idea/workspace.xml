@@ -5,19 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c1fc74d-4310-491d-b952-6db59b52fac3" name="Changes" comment="Client-server is created">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/controller/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/controller/FileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/model/AccessType.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/model/AccessType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/model/Students.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/model/Students.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/model/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/students.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/students.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/users.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Server/controller/FileManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/controller/FileManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Server/model/AccessType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/model/AccessType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/model/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/model/Users.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/students.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/students.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/users.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

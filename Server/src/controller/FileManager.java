@@ -16,6 +16,9 @@ public class FileManager {
     FileManager(){
         this("Server\\src\\");
     }
+    public void readInfo(){
+        
+    }
     public Students readArchiveXML(){
         return XmlParser.demarshalize(archiveFile, Students.class);
     }
@@ -29,12 +32,10 @@ public class FileManager {
     public void writeUsersXML(Users users){
         XmlParser.marshalize(usersFile, users, Users.class);
     }
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         Users users = new Users();
-        //User user1 = new User("sdf", "wef", AccessType.EDIT);
-        //User user2 = new User("sdf", "wef", AccessType.EDIT);
-        User user1 = new User("sdf", "wef");
-        User user2 = new User("SDFASFSA", "ASDFASF");
+        User user1 = new User("sdf", "wef", AccessType.EDIT);
+        User user2 = new User("sdf", "wef", AccessType.EDIT);
         users.addUser(user1);
         users.addUser(user2);
 
@@ -50,10 +51,9 @@ public class FileManager {
         Students students1 = fileManager.readArchiveXML();
         students1.printStudents();
 
-        System.out.println("--------------------------");
-        users.printUsers();
+        System.out.println("users");
         fileManager.writeUsersXML(users);
         Users users1 = fileManager.readUsersXML();
         users1.printUsers();
-    }
+    }*/
 }

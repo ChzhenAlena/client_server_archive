@@ -3,11 +3,11 @@
     <user>
         <login>sdf</login>
         <password>wef</password>
-        <accessType>READ</accessType>
+        <accessType>EDIT</accessType>
     </user>
     <user>
         <login>sdf</login>
         <password>wef</password>
-        <accessType>READ</accessType>
+        <accessType>EDIT</accessType>
     </user>
 </users>
