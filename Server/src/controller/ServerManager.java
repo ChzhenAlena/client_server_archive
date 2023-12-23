@@ -2,11 +2,11 @@ package controller;
 
 import java.io.*;
 import java.net.ServerSocket;
-import java.net.Socket;
 
-public class Server {
+public class ServerManager {
     private static final int port = 8000;
     ConnectionManager connectionManager = new ConnectionManager();
+    FileManager fileManager = new FileManager();
     public void start() {
         try(ServerSocket serverSocket = new ServerSocket(port)) {
             System.out.println("Server started");
@@ -16,5 +16,13 @@ public class Server {
             throw new RuntimeException(e);
         }
 
+
+    }
+    public void logIn(String login, String password){
+
+    }
+    public String[] receiveMessage(){
+        connectionManager.waitForMessage();
+        return connectionManager.receiveMessage().split(" ");
     }
 }

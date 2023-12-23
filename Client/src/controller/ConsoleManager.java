@@ -11,10 +11,23 @@ public class ConsoleManager {
         scanner = new Scanner(System.in);
     }
 
-    public void printAuthorizationMenu() {
-        String menu = "1. Register\n" +
-                "2. Log in\n" +
-                "Press 1 or 2";
+    public void printStartMenu(){
+        String menu = "1. Войти в систему\n" +
+                "2. Регистрация\n" +
+                "3. Завершить";
+        System.out.println(menu);
+    }
+    public void printAdminMenu(){
+        String menu = "1. Просмотреть архив\n"+
+                "2. Изменить запись\n" +
+                "3. Создать запись\n" +
+                "4. Удалить запись\n" +
+                "5. Выйти из системы";
+        System.out.println(menu);
+    }
+    public void printUserMenu(){
+        String menu = "1. Просмотреть архив\n"+
+                "2. Выйти из системы";
         System.out.println(menu);
     }
 

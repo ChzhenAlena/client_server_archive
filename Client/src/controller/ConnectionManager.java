@@ -9,7 +9,6 @@ public class ConnectionManager {
     Socket socket;
     BufferedReader reader;
     BufferedWriter writer;
-    ClientManager clientManager = new ClientManager();
     public void connect(){
         try {
             socket = new Socket(host, port);
@@ -20,9 +19,14 @@ public class ConnectionManager {
             throw new RuntimeException(e);
         }
     }
-    public void authorize(){
+    public void sendMessage(String message){
+        try {
+            writer.write(message);
+            writer.newLine();
+            writer.flush();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
-    }
-    public void sendCommand(){
     }
 }

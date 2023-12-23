@@ -1,10 +1,16 @@
 package model;
 
-public class User {
-    private String login;
-    private String password;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlEnum;
 
-    private AccessType accessType;
+public class User {
+    @XmlElement(name = "login")
+    public String login;
+    @XmlElement(name = "password")
+    public String password;
+    @XmlElement(name = "Enum")
+    public AccessType accessType;
     public User(){}
     public User(String login, String password, AccessType accessType){
         this.login = login;
