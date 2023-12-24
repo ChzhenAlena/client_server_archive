@@ -15,6 +15,12 @@ public class Server {
                 case "REGISTER":
                     serverManager.register(command[1], command[2]);
                     break;
+                case "SHOW":
+                    serverManager.sendStudent(command[1]);
+                    break;
+                case "CREATE":
+                    serverManager.addStudent();
+                    break;
 
                 case "EXIT":
                     serverManager.disconnect();

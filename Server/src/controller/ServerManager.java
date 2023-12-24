@@ -1,6 +1,7 @@
 package controller;
 
 import model.AccessType;
+import model.Student;
 import model.User;
 
 import java.io.*;
@@ -42,6 +43,16 @@ public class ServerManager {
         model.User user = new User(login, password, AccessType.READ);
         users.addUser(user);
         connectionManager.sendMessage("READ");
+    }
+    public void sendStudent(String id){
+        Student student =  fileManager.readStudentFromFile(id);
+        connectionManager.sendObject(student);
+    }
+    public void addStudent(){
+        connectionManager.sendMessage("OK");
+        Student student = connectionManager.receiveObject();
+        fileManager.writeStudentToFile(student);
+        System.out.println("student is added");
     }
 
     public String[] receiveMessage(){

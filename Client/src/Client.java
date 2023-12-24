@@ -34,13 +34,13 @@ public class Client {
                 answer = console.getNumber();
                 switch (answer) {
                     case 1:
-                        //clientManager.show();
+                        clientManager.show();
                         break;
                     case 2:
                         //clientManager.change();
                         break;
                     case 3:
-                        //clientManager.create();
+                        clientManager.create();
                         break;
                     case 4:
                         //clientManager.delete();
@@ -58,7 +58,7 @@ public class Client {
                 answer = console.getNumber();
                 switch (answer) {
                     case 1:
-                        //clientManager.show();
+                        clientManager.show();
                         break;
                     case 2:
                         access = null;

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<students>
+    <student>
+        <name>SD</name>
+        <birthDate>23423423</birthDate>
+        <groupNumber>3434</groupNumber>
+    </student>
+    <student>
+        <name>SDGSDFGSDF</name>
+        <birthDate>111</birthDate>
+        <groupNumber>0</groupNumber>
+    </student>
+</students>

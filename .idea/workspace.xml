@@ -5,20 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c1fc74d-4310-491d-b952-6db59b52fac3" name="Changes" comment="Client-server is created">
-      <change afterPath="$PROJECT_DIR$/Client/src/model/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/controller/ClientManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/controller/ClientManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/model/Users.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/controller/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/controller/ConnectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/controller/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/controller/ConnectionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/controller/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/controller/FileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/students.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/files/students.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/files/users.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/controller/ServerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/controller/ServerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/files/users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/files/users.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/model/Students.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Client/controller/ClientManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/controller/ClientManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Client/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Client/model/Users.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/controller/ConnectionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/controller/ConnectionManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/Server.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Server/controller/ConnectionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/controller/ConnectionManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/controller/FileManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/controller/FileManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/controller/ServerManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/controller/ServerManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/model/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/model/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/model/Students.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +69,12 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.FileManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\java\projects\client_server_archive\Server\src\files" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Client">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client" />
       <module name="Client" />
@@ -112,9 +124,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FileManager" />
         <item itemvalue="Application.Client" />
         <item itemvalue="Application.Server" />
+        <item itemvalue="Application.FileManager" />
         <item itemvalue="Application.XmlParser" />
         <item itemvalue="Application.ClientManager" />
       </list>

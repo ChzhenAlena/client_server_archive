@@ -6,27 +6,35 @@ import java.io.File;
 
 public class FileManager {
     private File directory;
-    private File archiveFile;
+    //private File archiveFile;
     private File usersFile;
     FileManager(String directory){
         this.directory = new File(directory);
-        archiveFile = new File(directory + "files\\students.xml");
-        usersFile = new File(directory + "files\\users.xml");
+        //archiveFile = new File(directory + "students.xml");
+        usersFile = new File(directory + "users.xml");
     }
     FileManager(){
-        this("Server\\src\\");
+        this("Server\\src\\files\\");
     }
 
-    public void findStudentFile(int id){
-
+    public Student readStudentFromFile(String id){
+        File file = new File(directory, id+".xml");
+        if(!file.exists())
+            return null;
+        Student student = XmlParser.demarshalize(file, Student.class);
+        return student;
     }
-    public Students readArchiveXML(){
+    public void writeStudentToFile(Student student){
+        File file = new File(directory, String.valueOf(student.getId())+".xml");
+        XmlParser.marshalize(file, student, Student.class);
+    }
+    /*public Students readArchiveXML(){
         return XmlParser.demarshalize(archiveFile, Students.class);
     }
     public void writeArchiveXML(Students students){
         XmlParser.marshalize(archiveFile, students, Students.class);
     }
-
+*/
     public Users readUsersXML(){
         return XmlParser.demarshalize(usersFile, Users.class);
     }
@@ -34,7 +42,15 @@ public class FileManager {
         XmlParser.marshalize(usersFile, users, Users.class);
     }
     public static void main(String[] args) {
-        Users users = new Users();
+       /* FileManager fileManager = new FileManager();
+        Student student = new Student(3, "sdf", "2020", 6723);
+        fileManager.writeStudentToFile(student);
+        Student student2 = fileManager.readStudentFromFile("3");
+        System.out.println(student2.toString());*/
+
+
+
+       /* Users users = new Users();
         User user1 = new User("sdf", "wef", AccessType.EDIT);
         User user2 = new User("sdf", "wef", AccessType.EDIT);
         users.addUser(user1);
@@ -46,7 +62,7 @@ public class FileManager {
         students.addStudent(student1);
         students.addStudent(student2);
 
-        FileManager fileManager = new FileManager();
+
         System.out.println("students");
         fileManager.writeArchiveXML(students);
         Students students1 = fileManager.readArchiveXML();
@@ -55,6 +71,8 @@ public class FileManager {
         System.out.println("users");
         fileManager.writeUsersXML(users);
         Users users1 = fileManager.readUsersXML();
-        users1.printUsers();
+        users1.printUsers();*/
+
+
     }
 }

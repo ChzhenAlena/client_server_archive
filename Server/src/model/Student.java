@@ -2,20 +2,24 @@ package model;
 
 import jakarta.xml.bind.annotation.*;
 
+import java.io.Serializable;
+
+@XmlType(name = "student")
 @XmlAccessorType(XmlAccessType.FIELD)
-//@XmlType(name = "student")
-public class Student {
+@XmlRootElement
+
+public class Student implements Serializable {
+    @XmlElement(name = "id")
+    public int id;
     @XmlElement(name = "name")
     public String name = "unknown";
     @XmlElement(name = "birthDate")
     public String birthDate = "unknown";
     @XmlElement(name = "groupNumber")
     public int groupNumber = 0;
-
-    public Student(){
-
-    };
-    public Student(String name, String birthDate, int groupNumber){
+    public Student(){}
+    public Student(int id, String name, String birthDate, int groupNumber){
+        this.id = id;
         this.name = name;
         this.birthDate = birthDate;
         this.groupNumber = groupNumber;
@@ -24,13 +28,21 @@ public class Student {
     @Override
     public String toString() {
         return "model.Student{" +
+                "id='" + id + '\'' +
                 "name='" + name + '\'' +
                 ", birthDate='" + birthDate + '\'' +
                 ", groupNumber=" + groupNumber +
                 '}';
     }
 
-   /* public String getName() {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getName() {
         return name;
     }
 
@@ -52,6 +64,6 @@ public class Student {
 
     public void setGroupNumber(int groupNumber) {
         this.groupNumber = groupNumber;
-    }*/
+    }
 
 }

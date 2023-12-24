@@ -24,6 +24,7 @@ public class ConnectionManager {
     }
     public void waitForMessage(){
         System.out.println("В ожидании сообщения");
+        System.out.println(socket.isClosed());
         try {
             while (socket.getInputStream().available() == 0) {
                 Thread.sleep(1000);
@@ -41,6 +42,7 @@ public class ConnectionManager {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        System.out.println("Сообщение получено: " + message.toString());
         return message.toString();
     }
     public void sendMessage(String message){
@@ -53,6 +55,31 @@ public class ConnectionManager {
         }
 
     }
+
+    public void sendObject(model.Student student){
+        try(ObjectOutputStream objectOutputStream = new ObjectOutputStream(socket.getOutputStream())) {
+            objectOutputStream.writeObject(student);
+            System.out.println(socket.isClosed());
+            System.out.println("Дело отправлено");
+            System.out.println(socket.isClosed());
+            objectOutputStream.flush();
+            //objectOutputStream.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public model.Student receiveObject(){
+        ObjectInputStream objectInputStream;
+        try {
+            objectInputStream = new ObjectInputStream(socket.getInputStream());
+            model.Student student = (model.Student)objectInputStream.readObject();
+            System.out.println("Дело получено");
+            return student;
+        } catch (ClassNotFoundException | IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public void close(){
         try {
             writer.close();

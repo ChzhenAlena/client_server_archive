@@ -21,16 +21,7 @@ public class ConnectionManager {
             throw new RuntimeException(e);
         }
     }
-    public void sendMessage(String message){
-        try {
-            writer.write(message);
-            writer.newLine();
-            writer.flush();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
 
-    }
     public void close(){
         try {
             writer.close();
@@ -49,10 +40,43 @@ public class ConnectionManager {
             throw new RuntimeException();
         }
     }
+    public void sendMessage(String message){
+        try {
+            writer.write(message);
+            writer.newLine();
+            writer.flush();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
     public String receiveMessage(){
         try {
             return reader.readLine();
         } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void sendObject(model.Student student){
+        ObjectOutputStream objectOutputStream;
+        try {
+            objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
+            objectOutputStream.writeObject(student);
+            objectOutputStream.flush();
+            //objectOutputStream.close();
+            System.out.println("Дело отправлено");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public model.Student receiveObject(){
+        ObjectInputStream objectInputStream;
+        try {
+            objectInputStream = new ObjectInputStream(socket.getInputStream());
+            model.Student student = (model.Student)objectInputStream.readObject();
+            return student;
+        } catch (ClassNotFoundException | IOException e) {
             throw new RuntimeException(e);
         }
     }
