@@ -37,13 +37,13 @@ public class Client {
                         clientManager.show();
                         break;
                     case 2:
-                        //clientManager.change();
+                        clientManager.change();
                         break;
                     case 3:
                         clientManager.create();
                         break;
                     case 4:
-                        //clientManager.delete();
+                        clientManager.delete();
                         break;
                     case 5:
                         access = null;

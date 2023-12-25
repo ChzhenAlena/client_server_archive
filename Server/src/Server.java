@@ -19,7 +19,13 @@ public class Server {
                     serverManager.sendStudent(command[1]);
                     break;
                 case "CREATE":
-                    serverManager.addStudent();
+                    serverManager.createStudent();
+                    break;
+                case "CHANGE":
+                    serverManager.changeStudent(command[1]);
+                    break;
+                case "DELETE":
+                    serverManager.deleteStudent(command[1]);
                     break;
 
                 case "EXIT":

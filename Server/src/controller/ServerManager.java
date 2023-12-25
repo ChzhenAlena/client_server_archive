@@ -33,28 +33,89 @@ public class ServerManager {
     public void signIn(String login, String password){
         model.User user = users.findUser(login, password);
         String message;
-        if(user == null)
-            message = "Failure";
-        else
+        if(user == null) {
+            message = "FAIL";
+            System.out.println("Пользователь не найден");
+        }
+        else {
             message = String.valueOf(user.getAccessType());
+            System.out.println("Пользователь найден");
+        }
         connectionManager.sendMessage(message);
     }
     public void register(String login, String password){
         model.User user = new User(login, password, AccessType.READ);
         users.addUser(user);
         connectionManager.sendMessage("READ");
+        System.out.println("Пользователь добавлен");
     }
     public void sendStudent(String id){
         Student student =  fileManager.readStudentFromFile(id);
-        connectionManager.sendObject(student);
+        if(student == null){
+            connectionManager.sendMessage("FAIL");
+            System.out.println("Дело № " + id + " не найдено");
+        }
+        else{
+            connectionManager.sendMessage("OK");
+            connectionManager.sendObject(student);
+        }
     }
-    public void addStudent(){
+    public boolean createStudent(){
         connectionManager.sendMessage("OK");
         Student student = connectionManager.receiveObject();
+        while(fileManager.fileExists(String.valueOf(student.getId()))){
+            System.out.println("Такое дело уже есть");
+            connectionManager.sendMessage("FAIL");
+            String[] newId = receiveMessage();
+            if(newId[0].equals("-1")) {
+                System.out.println("Такое дело уже существует. Пользователь передумал создавать дело");
+                connectionManager.sendMessage("OK");
+                return false;
+            }
+            student.setId(Integer.parseInt(newId[0]));
+        }
         fileManager.writeStudentToFile(student);
-        System.out.println("student is added");
+        connectionManager.sendMessage("OK");
+        System.out.println("Дело № " + student.getId() + " добавлено");
+        return true;
+    }
+    public void deleteStudent(String id){
+        if(fileManager.deleteStudentFile(id)) {
+            connectionManager.sendMessage("OK");
+            System.out.println("Дело № " + id + " удалено");
+        }
+        else {
+            connectionManager.sendMessage("FAIL");
+            System.out.println("Дело № " + id + " не найдено");
+        }
     }
 
+    public void changeStudent(String id){
+        System.out.println("sdjfhwfjklwfjkl");
+        if(!fileManager.fileExists(id)){
+            connectionManager.sendMessage("FAIL");
+            System.out.println("Дело № " + id + " не найдено");
+        }
+        else {
+            connectionManager.sendMessage("OK");
+            Student student = fileManager.readStudentFromFile(id);
+            connectionManager.sendObject(student);
+            student = connectionManager.receiveObject();
+            fileManager.writeStudentToFile(student);
+            System.out.println("Дело № " + id + " изменено");
+        }
+        /*Student student =  fileManager.readStudentFromFile(id);
+        if(student == null){
+            connectionManager.sendMessage("FAIL");
+            System.out.println("Дело № " + id + " не найдено");
+        }
+        else{
+            connectionManager.sendMessage("OK");
+            connectionManager.sendObject(student);
+            student = connectionManager.receiveObject();
+            fileManager.writeStudentToFile(student);
+        }*/
+    }
     public String[] receiveMessage(){
         connectionManager.waitForMessage();
         return connectionManager.receiveMessage().split(" ");

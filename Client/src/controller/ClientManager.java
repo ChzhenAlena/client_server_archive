@@ -16,12 +16,12 @@ public class ClientManager {
         String password = console.getString();
         connectionManager.sendMessage(mode + " " + login + " " + password);
         String serverAnswer = receiveMessage();
-        if(serverAnswer.equals("Failure") && mode.equals("SIGNIN")){
+        if(serverAnswer.equals("FAIL") && mode.equals("SIGNIN")){
             System.out.println("Не получилось войти. Проверьте свой логин и пароль");
             return null;
         }
-        if(serverAnswer.equals("Failure") && mode.equals("REGISTER")){
-            System.out.println("Пользователь с таким логином уже зарегестрирован. Выберите другой логин?");
+        if(serverAnswer.equals("FAIL") && mode.equals("REGISTER")){
+            System.out.println("Пользователь с таким логином уже зарегестрирован. Выберите другой логин");
             return null;
         }
         else{
@@ -33,23 +33,51 @@ public class ClientManager {
         System.out.println("Введите номер дела: ");
         int id = console.getNumber();
         connectionManager.sendMessage("SHOW " + id);
-        Student student = connectionManager.receiveObject();
-        System.out.println(student.toString());
+        if(connectionManager.receiveMessage().equals("FAIL")){
+            System.out.println("Дела с таким номером нет");
+        }
+        else{
+            Student student = connectionManager.receiveObject();
+            System.out.println(student.toString());
+        }
+
     }
     public void create(){
         connectionManager.sendMessage("CREATE");
         if(connectionManager.receiveMessage().equals("OK")) {
-            Student student = new Student(3, "dfwf", "wewre", 2342);
+            Student student = StudentBuilder.create();
             connectionManager.sendObject(student);
+            while(connectionManager.receiveMessage().equals("FAIL")){
+                System.out.println("Пользователь с таким id уже существует. Введите другой id. Введите -1, чтобы не создавать пользователя");
+                String number = console.getString();
+                connectionManager.sendMessage(number);
+            }
         }
-        /*System.out.println("Введите имя: ");
-        student.setName(console.getString());
-        System.out.println("Введите дату рождения: ");
-        student.setBirthDate(console.getString());
-        System.out.println("Введите номер группы: ");
-        student.setGroupNumber(console.getNumber());*/
+    }
+    public void change(){
+        System.out.println("Введите номер дела: ");
+        int id = console.getNumber();
+        connectionManager.sendMessage("CHANGE " + id);
+        if(connectionManager.receiveMessage().equals("FAIL")){
+            System.out.println("Дела с таким номером нет");
+        }
+        else{
+            Student student = connectionManager.receiveObject();
+            StudentBuilder.change(student);
+            connectionManager.sendObject(student);
+            System.out.println("Дело отправлено");
+        }
 
-
+    }
+    public void delete(){
+        System.out.println("Введите номер дела: ");
+        int id = console.getNumber();
+        connectionManager.sendMessage("DELETE " + id);
+        if(connectionManager.receiveMessage().equals("OK")) {
+            System.out.println("Дело удалено");
+        }
+        else
+            System.out.println("Дело не было найдено");
     }
     public void exit(){
         connectionManager.sendMessage("EXIT");

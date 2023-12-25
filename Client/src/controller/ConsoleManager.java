@@ -37,9 +37,15 @@ public class ConsoleManager {
     }
 
     public int getNumber() {
-        int number = scanner.nextInt();
-        scanner.nextLine();
-        return number;
+        int number;
+        while(true) {
+            if (!scanner.hasNextInt()) {
+                System.out.println("Введите число");
+                scanner.next();
+            }
+            else
+                return scanner.nextInt();
+        }
     }
 
 

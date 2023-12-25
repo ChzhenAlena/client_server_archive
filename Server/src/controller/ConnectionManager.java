@@ -23,8 +23,7 @@ public class ConnectionManager {
         System.out.println("Клиент подключился");
     }
     public void waitForMessage(){
-        System.out.println("В ожидании сообщения");
-        System.out.println(socket.isClosed());
+        //System.out.println("В ожидании сообщения");
         try {
             while (socket.getInputStream().available() == 0) {
                 Thread.sleep(1000);
@@ -57,13 +56,12 @@ public class ConnectionManager {
     }
 
     public void sendObject(model.Student student){
-        try(ObjectOutputStream objectOutputStream = new ObjectOutputStream(socket.getOutputStream())) {
+        ObjectOutputStream objectOutputStream;
+        try {
+            objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
             objectOutputStream.writeObject(student);
-            System.out.println(socket.isClosed());
-            System.out.println("Дело отправлено");
-            System.out.println(socket.isClosed());
+            System.out.println("Дело № " + student.getId() + " отправлено");
             objectOutputStream.flush();
-            //objectOutputStream.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
